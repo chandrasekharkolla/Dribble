@@ -1,6 +1,7 @@
 <%= image_tag @post.image.url(:medium) %>
 <h1><%= @post.title %></h1>
-<p><%= link_to @post.link %></p>
+<p><a href="<%= @post.link %>" target="_blank<%= link_to @post.link %></a></p>
+<p><%= @post.user.first_name %></p>
 <p><%= @post.description %></p>
 
 <%= link_to "Edit", edit_post_path(@post) %>
