@@ -1,6 +1,8 @@
 <%= form_for(@post) do |i| %>
+	<%= i.label :image, "Upload an Image" %>
+	<%= i.file_field :image, autofocus: true %>
 	<%= i.label :title %>
-	<%= i.text_field :title, placeholder: "Title", class: 'form-control', autofocus: true %>
+	<%= i.text_field :title, placeholder: "Title", class: 'form-control' %>
 	<%= i.label :link %>
 	<%= i.text_field :link, placeholder: "Link", class: 'form-control' %>
 	<%= i.label :description %>
