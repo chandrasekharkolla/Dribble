@@ -1,0 +1,10 @@
+<%= form_for(@post) do |i| %>
+	<%= i.label :title %>
+	<%= i.text_field :title, placeholder: "Title", class: 'form-control', autofocus: true %>
+	<%= i.label :link %>
+	<%= i.text_field :link, placeholder: "Link", class: 'form-control' %>
+	<%= i.label :description %>
+	<%= i.text_area :description, placeholder: "Description", class: 'form-control' %>
+
+	<%= i.button :Submit, class: 'btn btn-md btn-primary' %>
+<% end %>
