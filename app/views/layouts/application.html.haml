@@ -1,0 +1,24 @@
+!!!
+%html
+%head
+  %title Links
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+  %link{ rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" }
+  %link{ rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" }
+%body
+  %header
+    .wrapper.clearfix
+      #logo= link_to "Links", root_path
+      %nav
+        - if user_signed_in?
+          = link_to current_user.first_name, edit_user_registration_path
+          = link_to "Add new Inspiration", new_post_path, class: "button"
+        - else
+          = link_to "Sign in", new_user_session_path
+          = link_to "Sign up", new_user_registration_path, class: 'button'
+  %p.notice= notice
+  %p.alert= alert
+  .wrapper
+    = yield
