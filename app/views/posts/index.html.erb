@@ -3,6 +3,7 @@
 		<h1><%= link_to image_tag(post.image.url(:small), class: 'img-rounded'), post_path(post) %>
 		<%= link_to post.title, post_path(post) %></h1>
 		<%= pluralize(post.comments.count, "Comment") %>
+		<%= pluralize(post.get_likes.count, "Like") %>
 	<% end %> 
 </div>
 

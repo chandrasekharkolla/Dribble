@@ -18,6 +18,7 @@ gem 'paperclip', '~> 4.3', '>= 4.3.5'
 gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'haml', '~> 4.0', '>= 4.0.7'
+gem 'acts_as_votable', '~> 0.10.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
